@@ -17,7 +17,7 @@ $Groups = @(One,"Two","Three Cats")
 
 # The Get-Verb cmdlet returns an array. Array objects always contain a count property.  Is count the same as length?
 # Measure-Object | Get-Member shows the property "count".
-(Get-verb).Count 
+# (Get-verb).Count 
 
 <# Create a "strongly" typed array, an array that can contain ONLY numbers or only dates or only whatever.
 # [int[]] $a = 1,2,3,4
@@ -77,14 +77,14 @@ World
 Tuesday, August 21, 2007 12:12:28 
 #>
 
-<# Simeple example
+# Simple example
   [array]$Array = 1..100
 
   ForEach ($_ in $Array)
   {
    Write-Host -ForegroundColor Green "$_ is an object in the array!"
   }
-#>
+
 
 <#
 $Array = 1..100
