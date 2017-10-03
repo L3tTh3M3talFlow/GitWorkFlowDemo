@@ -78,16 +78,14 @@ Tuesday, August 21, 2007 12:12:28
 #>
 
 # Simple example
-  [array]$Array = 1..100
+[array]$Array = 1..100
 
-  ForEach ($_ in $Array)
-  {
-   Write-Host -ForegroundColor Green "$_ is an object in the array!"
-  }
+ForEach ($_ in $Array)
+{
+ Write-Host -ForegroundColor Green "$_ is an object in the array!"
+}
 
-
-<#
+# Simple example #2
 $Array = 1..100
 
 ForEach ($_ in $Array) { Write-Host -ForegroundColor Yellow "$_ is an object in the array!" }
-#>
