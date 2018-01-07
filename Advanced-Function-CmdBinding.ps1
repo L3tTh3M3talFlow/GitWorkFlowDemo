@@ -31,23 +31,24 @@ Function Get-Stuff {
 # virtually no additional programing.
 #>
 
-Function Get-Stuff {
+Function Get-Stuff
+{
     [cmdletbinding()]
     Param(
-          # True indicates the cmdlet parameter is required. If a required parameter is not provided when the cmdlet is invoked, Windows 
-          # PowerShell prompts the user for a parameter value.
-          # True indicates that the cmdlet parameter takes its value from a pipeline object.
-          [Parameter(Mandatory=$true,ValueFromPipeLine=$true)]
-          [array]$Array
-         )
+            # True indicates the cmdlet parameter is required. If a required parameter is not provided when the cmdlet is invoked, Windows 
+            # PowerShell prompts the user for a parameter value.
+            # True indicates that the cmdlet parameter takes its value from a pipeline object.
+            [Parameter(Mandatory=$true,ValueFromPipeLine=$true)]
+            [array]$Array
+        )
     PROCESS {
-             Foreach ($item in $array)
-             {
-              Write-Verbose "$item is an item in the array."
-              # Write-Host "$item is an item in the array." -ForegroundColor Yellow
-             }
+                Foreach ($item in $array)
+            {
+                Write-Verbose "$item is an item in the array."
+                # Write-Host "$item is an item in the array." -ForegroundColor Yellow
             }
-           } # End function
+        }
+} # End function
 
 # PS C:\Get-Stuff -Array 1,2,3,4,5 -Verbose <-- Output is written to the console.
 # PS C:\Get-Stuff -Array 1,2,3,4,5 <-- No outputput is written to the console.
